@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Soma de dois números</h1>
+    <button onclick="inicio()">Aqui!</button>
+    <section id="resultado">
+        <p>Digite os números</p>
+    </section>
+
+    <script>
+
+        function sum(n1, n2) {
+            return parseInt(n1) + parseInt(n2);
+        }
+
+        function inicio() {
+            let n1 = window.prompt("Digite o primeiro número")
+            let n2 = window.prompt("Digite o segundo número")
+            let res = window.document.getElementById("resultado")
+            res.innerHTML = `<p> A soma de ${n1} e ${n2} é ${sum(n1, n2)}`
+        }
+    </script>
+</body>
+
+</html>

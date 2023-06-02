@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            padding: 10px;
+            background-color: aqua;
+            border: none;
+            border-radius: 30%;
+            font: 30px;
+            color:rgb(4, 68, 68);
+            font-weight: 300
+        }
+        button:hover{
+            background-color: rgb(41, 170, 170);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Boas-Vindas!</h1>
+    <button onclick="desafio()">Antecessor e Sucessor</button>
+
+    <script>
+        function desafio() {
+            let n1 = prompt("Digite um número qualquer")
+        
+            let n2 = parseInt(n1) - 1
+            let n3 = parseInt(n1) + 1
+            if(n1 > 0){
+                window.alert(`Antes de ${n1} temos o número ${n2}. Depois de ${n1} temos o número ${n3}`)
+            }else if (n2<0 && n3<0) {
+                window.alert(`O antecessor e o sucessor de ${n1} são números negativos`)
+            } else if (n2<=0 && n3>0) {
+                window.alert(`O antecessor de ${n1} é negativo. Mas o sucessor é o número ${n3}`)
+            } else {
+                
+                
+            }
+        }
+    </script>
+</body>
+
+</html>

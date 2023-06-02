@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button{
+            padding: 10px;
+            background-color: aqua;
+            border: none;
+            border-radius: 30%;
+            font: 30px;
+            color:rgb(4, 68, 68);
+            font-weight: 300
+        }
+        button:hover{
+            background-color: rgb(41, 170, 170);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Boas-Vindas!</h1>
+    <button onclick="desafio()">Comprar Produto</button>
+
+    <script>
+        function desafio () {
+            let produto = prompt("Qual produto você está comprando?")
+            
+            let valorProduto = prompt(`Quanto custa ${produto} que você está comprando?`)
+
+            let valorDado = prompt(`Qual foi o valor que você deu para pagar ${produto}?`)
+
+            let n1 = parseFloat(valorDado, 2)
+            let n2 = parseFloat(valorProduto, 2)
+            let n3 = n1-n2
+
+            if(n1 > n2){
+                window.alert(`Você comprou ${produto} que custou R$ ${n2}, deu R$ ${n1} em dinheiro e vai receber R$ ${n3}. Volte sempre!!`)
+            }else if (n1 - n2 == 0) {
+                window.alert("Não irá precisar de troco!! Volte sempre!!")
+            }
+                
+        }
+    </script>
+</body>
+
+</html>
